@@ -17,7 +17,7 @@ connectDB();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://main--calm-tanuki-515f8a.netlify.app/",
+    origin: "https://main--calm-tanuki-515f8a.netlify.app",
   })
 );
 app.get("/", (req, res) => {
@@ -39,7 +39,7 @@ const server = app.listen(PORT, () => {
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://main--calm-tanuki-515f8a.netlify.app/",
+    origin: "https://main--calm-tanuki-515f8a.netlify.app",
   },
 });
 
