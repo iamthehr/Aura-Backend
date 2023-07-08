@@ -4,7 +4,8 @@ const dotenv = require("dotenv");
 const messageRoutes = require("./routes/messageRoutes");
 const userRoutes = require("./routes/userRoutes");
 const chatRoutes = require("./routes/chatRoutes");
-const connectDB = require("../Backend/config/db");
+// const connectDB = require("../Backend/config/db");
+const connectDB = require("./config/db");
 
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const app = express();
