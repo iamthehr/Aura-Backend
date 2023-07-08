@@ -6,6 +6,7 @@ const userRoutes = require("./routes/userRoutes");
 const chatRoutes = require("./routes/chatRoutes");
 // const connectDB = require("../Backend/config/db");
 const connectDB = require("./config/db");
+const cors = require("cors");
 
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const app = express();
@@ -14,6 +15,11 @@ dotenv.config();
 connectDB();
 
 app.use(express.json());
+app.use(
+  cors({
+    origin: "https://main--calm-tanuki-515f8a.netlify.app/",
+  })
+);
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
